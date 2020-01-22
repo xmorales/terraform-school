@@ -1,0 +1,8 @@
+1. Aplicar la planificación
+2. Ver cómo nos pide el valor de la variable
+3. Lanzar el apply con -var
+4. Lanzar el apply con -var-file
+5. Crear variable de entorno TF_VAR_resource_group=practica2
+6. Lanzar apply de nuevo sin parámetros
+7. Cambiar el nombre a p2.tfvars -> terraform.tfvars
+8. Lanzar apply de nuevo sin parámetros

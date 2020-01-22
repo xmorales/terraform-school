@@ -1,0 +1,1 @@
+1. Incluir el uso de locals y output a la practica anterior
