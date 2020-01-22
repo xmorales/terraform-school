@@ -1,0 +1,4 @@
+1. Inicializar un proveedor para azurerm
+2. Crear un resource group llamado practica1 en la región West Europe
+3. Cambiarla a la región East Europe y ver cómo falla
+4. Cambiarla a la región North Europe
