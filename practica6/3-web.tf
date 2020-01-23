@@ -78,7 +78,6 @@ resource "azurerm_virtual_machine" "vm" {
   availability_set_id   = azurerm_availability_set.avset.id
   vm_size               = var.web_size
   network_interface_ids = [element(azurerm_network_interface.nic.*.id, count.index)]
-  network_interface_ids = [azurerm_network_interface.nic[count.index].id]
   count                 = 2
 
   storage_image_reference {
@@ -97,11 +96,7 @@ resource "azurerm_virtual_machine" "vm" {
     computer_name  = var.hostname
     admin_username = var.admin_username
     admin_password = var.admin_password
-    custom_data    = """#/bin/bash
-    yum update;
-    yum install -y httpd;
-    systemctl enable httpd;
-    systemctl start httpd"""
+    custom_data    = "#/bin/bash\n yum update; yum install -y httpd; systemctl enable httpd; systemctl start httpd"
   }
 
   os_profile_linux_config {
